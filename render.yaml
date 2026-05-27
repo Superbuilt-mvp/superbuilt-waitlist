@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: superbuilt-backend
+    runtime: python
+    plan: starter
+    pythonVersion: "3.11"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: jwt_secret
+        sync: false
+      - key: accessExpirationMinutes
+        sync: false
+      - key: googleClientId
+        sync: false
+      - key: googleClientSecret
+        sync: false
+      - key: redirectUri
+        sync: false
+      - key: frontendUrl
+        sync: false
