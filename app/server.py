@@ -28,6 +28,7 @@ from app.routes.onboarding_routes import router as onboarding_router
 ALLOWED_ORIGINS = [
     "https://www.superbuilt.ai",
     "https://superbuilt.ai",
+    "https://teal-longma-6707b5.netlify.app",
     "http://localhost:3000",
     "http://localhost:3001",
 ]
