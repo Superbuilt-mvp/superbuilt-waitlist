@@ -23,6 +23,7 @@ from app.db.db import connect_db, close_db
 from app.routes.waitlist_routes import router as waitlist_router
 from app.routes.credit_routes import router as credit_router
 from app.routes.onboarding_routes import router as onboarding_router
+from app.routes.fellowship_routes import router as fellowship_router
 
 # Same allowlist as server.ts
 ALLOWED_ORIGINS = [
@@ -59,6 +60,7 @@ app.add_middleware(
 app.include_router(waitlist_router, prefix="/api/v1")
 app.include_router(credit_router, prefix="/api/v1")
 app.include_router(onboarding_router, prefix="/api/v1")
+app.include_router(fellowship_router, prefix="/api/v1")
 
 
 @app.get("/")
